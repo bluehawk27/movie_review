@@ -15,3 +15,13 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('.star-rating').raty({
+  path: '/assets/',
+  readOnly: true,
+  score: function(){
+     return $(this).attr('data-score');
+  }
+
+});
